@@ -12,3 +12,9 @@ function Book(title, author, pages, read) {
 function addBookToLibrary(book) {
   myLibrary.append(book);;
 }
+
+function showBooks(library) {
+    myLibrary.forEach((book) => {
+        
+    });
+}
