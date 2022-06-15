@@ -1,5 +1,67 @@
 body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+header {
+    background-color: #334155;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+#logo {
+    color: #f8fafc;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+#options {
+    display: flex;
+    justify-content: right;
+    margin-right: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#book-container {
+    width: 60vw;
+}
+
+#catalogue {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, 200px);
+    margin-left: 3vw;
+}
+
+.book {
+    height: 200px;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-options {
+    position: relative  ;
+    top: 0;
 }
