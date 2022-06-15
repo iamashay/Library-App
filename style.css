@@ -51,6 +51,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
 
 .book-info {
@@ -61,7 +62,18 @@ main {
     justify-content: center;
 }
 
-.book-options {
-    position: relative  ;
+.read-check {
+    position: absolute  ;
     top: 0;
+    left: 0;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.delete-book {
+    position: absolute  ;
+    top: 0;
+    right: 0;
+    margin: 6px;
+    cursor: pointer;
 }
