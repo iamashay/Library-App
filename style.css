@@ -77,3 +77,11 @@ main {
     margin: 6px;
     cursor: pointer;
 }
+
+.popup-overlay {
+    position: absolute;
+    background-color: #31435091;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+}
