@@ -1,8 +1,9 @@
 const popupCloseBut = document.getElementById("popup-close");
-const 
+const popupOverlay = document.querySelector(".popup-overlay");
 
-popupCloseBut.addEventListener('click', function() {
-    
+function closePopup(){
+    popupOverlay.style.display = "none";
+}
 
+popupCloseBut.addEventListener('click', closePopup);
 
-})
