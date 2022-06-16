@@ -68,8 +68,50 @@
     </main>
     <div class="popup-overlay">
         <div class="popup">
-            
+            <form id="add-book-form">
+                <div id="popup-close">X</div>
+                <h2>Add a Book</h2>
+                <div class="input-box">
+                    <input type="text" name="book-name" id="book-name">
+                    <label for="book-name">Name</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="text"  name="book-author-name" id="book-author-name" >
+                    <label for="book-author-name">Author Name</label>
+
+                </div>
+
+                <div class="input-box">
+                    <input type="number" name="book-pages" id="book-pages">
+                    <label for="book-pages">Pages</label>
+                </div>
+                
+                <div class="input-read-status">
+                    <label for="book-read-status" >Read? </label>
+                    <input type="checkbox" name="book-read-status" id="book-read-status">
+                </div>
+                
+                <button class="submit-button" type="submit" >Submit</button>
+
+
+            </form>
         </div>
     </div>
+
+    <script>
+        const inputs = document.querySelectorAll(".input-box input");
+        
+        inputs.forEach((input) => {
+        input.addEventListener("blur", (event) => {
+            if (event.target.value) {
+            input.classList.add("is-valid");
+            } else {
+            input.classList.remove("is-valid");
+            }
+        });
+        });
+    </script>
+
 </body>
 </html>
