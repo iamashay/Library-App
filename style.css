@@ -73,6 +73,12 @@ main {
     left: 0;
     margin: 6px;
     cursor: pointer;
+    opacity: 50%;
+    transition-duration: 400ms;
+}
+
+.read-check:hover {
+    opacity: 100%;
 }
 
 .delete-book {
@@ -81,6 +87,12 @@ main {
     right: 0;
     margin: 6px;
     cursor: pointer;
+    opacity: 50%;
+    transition-duration: 400ms;
+}
+
+.delete-book:hover {
+    opacity: 100%;
 }
 
 .popup-overlay {
