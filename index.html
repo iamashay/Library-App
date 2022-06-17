@@ -14,77 +14,37 @@
     <main>
         <div id="book-container">
             <div id="options">
-                <button>Add New Book</button>
+                <button id="add-book-but">Add New Book</button>
             </div>
             <section>
                 <h2>
                     Books
                 </h2>
                 <section id="catalogue">
-                    <div class="book">
-                        <div class="book-options">
-                            <img class="read-check" src="./no.png" alt="Change read status" title="Change read status">
-                            <img class="delete-book" src="./delete.png" alt="Delete book icon" title="Delete this book">
-                        </div>
-                        <div class="book-info">
-                            <div class="book-name">Harry Potter</div>
-                            <div class="author">J.K Rowling</div>
-                            <div class="pages">34 pages</div>
-                            <div class="read-status">Read</div>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <div class="book-options">
-                            <img class="read-check" src="./yes.png" alt="Change read status" title="Change read status">
-                            <img class="delete-book" src="./delete.png" alt="Delete book icon" title="Delete this book">
-                        </div>
-                        <div class="book-info">
-                            <div class="book-name">Forestt Gump</div>
-                            <div class="author">Minua</div>
-                            <div class="pages">89 pages</div>
-                            <div class="read-status">Not read</div>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <div class="book-options"></div>
-                        <div class="book-info">
-                            <div class="book-name">Word Power</div>
-                            <div class="author">Norman Lewis</div>
-                            <div class="pages">56 pages</div>
-                            <div class="read-status">Not read</div>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <div class="book-options"></div>
-                        <div class="book-info">
-                            <div class="book-name">English Grammar</div>
-                            <div class="author">Wren and Martin</div>
-                            <div class="pages">453 pages</div>
-                            <div class="read-status">Not read</div>
-                        </div>
-                    </div>
+                    
                 </section>
             </section>
         </div>
     </main>
+
     <div class="popup-overlay">
         <div class="popup">
             <form id="add-book-form">
                 <div id="popup-close">X</div>
                 <h2>Add a Book</h2>
                 <div class="input-box">
-                    <input type="text" name="book-name" id="book-name">
+                    <input type="text" name="book-name" id="book-name" required>
                     <label for="book-name">Name</label>
                 </div>
 
                 <div class="input-box">
-                    <input type="text"  name="book-author-name" id="book-author-name" >
+                    <input type="text"  name="book-author-name" id="book-author-name" required>
                     <label for="book-author-name">Author Name</label>
 
                 </div>
 
                 <div class="input-box">
-                    <input type="number" name="book-pages" id="book-pages">
+                    <input type="number" name="book-pages" id="book-pages" required>
                     <label for="book-pages">Pages</label>
                 </div>
                 
@@ -99,20 +59,6 @@
             </form>
         </div>
     </div>
-
-    <script>
-        const inputs = document.querySelectorAll(".input-box input");
-        
-        inputs.forEach((input) => {
-        input.addEventListener("blur", (event) => {
-            if (event.target.value) {
-            input.classList.add("is-valid");
-            } else {
-            input.classList.remove("is-valid");
-            }
-        });
-        });
-    </script>
 
 </body>
 </html>
