@@ -252,6 +252,28 @@ main {
     cursor: pointer;
 }
 
+
+@keyframes removePopup {
+    0%   {
+        opacity: 100%;
+    }
+    100% {
+        margin-right: 80vw;
+        opacity: 0%;
+        display: none;
+    }
+}
+
+@keyframes openPopup {
+    0%   {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+
 .popup-overlay {
     position: absolute;
     background-color: #000000c7;
@@ -260,7 +282,7 @@ main {
     z-index: 99;
     display: flex;
     justify-content: center;
-    
+    transition: ease-in-out 0.3s;
 }
 
 .popup {
