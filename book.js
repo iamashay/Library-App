@@ -7,7 +7,7 @@ const bookAddForm = document.querySelector("#add-book-form");
 const submitBut = document.querySelector(".submit-button");
 const delBookBut = document.querySelector(".delete-book");
 const readCheckBut = document.querySelector(".read-check");
-
+const addStatusMsg = document.querySelector(".add-status-msg");
 
 let myLibrary = [];
 
@@ -56,6 +56,8 @@ function addBookToLibrary(e) {
   let myBook = new Book(titleInput.value, authorInput.value, pagesInput.value, readInput.checked)
   myLibrary.unshift(myBook);
   initShowBooks();
+  e.target.reset();
+  addStatusMsg.innerText = "Book Added !"
 }
 
 function initShowBooks() {
