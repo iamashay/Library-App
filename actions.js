@@ -9,8 +9,8 @@ const inputs = document.querySelectorAll(".input-box input");
 function togglePopup(e){
     let popupOverlayStyle = popupOverlay.style;
 
-    if (popupOverlayStyle.display === "none"){
-        popupOverlayStyle.removeProperty("display");
+    if (popupOverlayStyle.display === "none" || !popupOverlayStyle.display){
+        popupOverlayStyle.display = "flex";
         popupOverlayStyle.animation = "openPopup 0.5s";
     }else {
         popupOverlayStyle.animation = "removePopup 0.5s";
