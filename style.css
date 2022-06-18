@@ -68,9 +68,7 @@ main {
 }
 
 .read-check {
-    position: absolute  ;
-    top: 0;
-    left: 0;
+
     margin: 6px;
     cursor: pointer;
     opacity: 50%;
@@ -82,9 +80,7 @@ main {
 }
 
 .delete-book {
-    position: absolute  ;
-    top: 0;
-    right: 0;
+
     margin: 6px;
     cursor: pointer;
     opacity: 50%;
