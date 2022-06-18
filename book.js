@@ -1,4 +1,4 @@
-const catalogue = document.querySelector(".catalogue");
+const catalogue = document.querySelector("#catalogue");
 const titleInput = document.querySelector("#book-name");
 const authorInput = document.querySelector("#book-author-name");
 const pagesInput = document.querySelector("#book-pages");
@@ -33,15 +33,20 @@ function appendToCatalogue(book, id){
     myBookRead = "Unread";
   }
 
-  let myBook = document.createElement("tr")
+  let myBook = document.createElement("div")
+  myBook.setAttribute("class", "book");
+  myBook.setAttribute("data-id", id);
   myBook.innerHTML = `
-      <tr>
-        <td>${myBookTitle}</td>
-        <td>${myBookAuthor}</td>
-        <td>${myBookPages}</td>
-        <td><img class="read-check" src="./${myBookRead}.png"  onClick="toggleReadStatus(this, ${id})" alt="Change read status" title="Change read status"></td>
-        <td><img class="delete-book" onClick="deleteBook(${id})" src="./delete.png" alt="Delete book icon" title="Delete this book"></td>
-      </tr>
+    <div class="book-options">
+      <img class="read-check" src="./${myBookRead}.png"  onClick="toggleReadStatus(this, ${id})" alt="Change read status" title="Change read status">
+      <img class="delete-book" onClick="deleteBook(${id})" src="./delete.png" alt="Delete book icon" title="Delete this book">
+    </div>
+    <div class="book-info">
+      <div class="book-name">${myBookTitle}</div>
+      <div class="author">${myBookAuthor}</div>
+      <div class="pages">${myBookPages} pages</div>
+      <div class="read-status">${myBookRead}</div>
+    </div>
                     `
   catalogue.appendChild(myBook);
 }
@@ -49,7 +54,7 @@ function appendToCatalogue(book, id){
 function addBookToLibrary(e) {
   e.preventDefault();
   let myBook = new Book(titleInput.value, authorInput.value, pagesInput.value, readInput.checked)
-  myLibrary.push(myBook);
+  myLibrary.unshift(myBook);
   initShowBooks();
   e.target.reset();
   addStatusMsg.innerText = "Book Added !"
@@ -83,8 +88,8 @@ function toggleReadStatus(elm, id){
 let book1 = new Book("Harry Potter", "J.K. Rowling", 34, false);
 let book2 = new Book("Forestt Gump", "Miua", 12, true);
 
-myLibrary.push(book1);
-myLibrary.push(book2);
+myLibrary.unshift(book1);
+myLibrary.unshift(book2);
 console.log(myLibrary, book1, book2)
 initShowBooks();
 
