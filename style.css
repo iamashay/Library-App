@@ -206,7 +206,7 @@ main {
     transform: translateY(-100%) scale(0.75);
   }
 
-.custom-button {
+.submit-button {
     background-color: #d2ffb6;
     border: 1px solid #4CAF50;
     padding: 10px;
@@ -218,10 +218,28 @@ main {
     cursor: pointer;
 }
 
-.custom-button:hover {
+.submit-button:hover {
     color: #fff;
     background-color: #4CAF50;
 }
+
+.custom-button:hover {
+    color: #fff;
+    background-color: #334155;
+}
+
+.custom-button {
+    background-color: #e0edff;
+    border: 1px solid #334155;
+    padding: 10px;
+    padding-left: 15px;
+    color: #283e5d;
+    padding-right: 15px;
+    font-size: 20px;
+    transition-duration: 400ms;
+    cursor: pointer;
+}
+
 
 #popup-close{
     position: absolute;
